@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import artigotdd.model.Calculadora;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -25,11 +22,22 @@ public class CalculadoraTeste {
     {
         int valorA = 1;
 	int valorB = 2;
-	int soma = 0;
-
+//	int soma = 0;
+        Calculadora calculadora = new Calculadora();
+        int soma = calculadora.soma(valorA, valorB);
 	assertEquals(3, soma);
 
     }
+    
+    @Test
+    public void deveriaSubtrairDoisValoresPassados() throws Exception {
+	Calculadora calculadora = new Calculadora();
+	int valorA = 1;
+	int valorB = 2;
+	int subtracao = calculadora.subtrai(valorA, valorB);
+
+	assertEquals(-1, subtracao);
+}
     
 //    @BeforeClass
 //    public static void setUpClass() {
